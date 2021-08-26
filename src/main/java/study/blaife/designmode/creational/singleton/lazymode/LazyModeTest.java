@@ -12,11 +12,11 @@ import java.util.concurrent.*;
 public class LazyModeTest {
 
     @Test
-    public void getNumberForLazyAndSafeSingleton() {
+    public void getNumberForLazyAndUnSafeSingleton() {
         int threadNumber = 10;
 
-        ExecutorService executor = new ThreadPoolExecutor(10, 20, 200, TimeUnit.MILLISECONDS,
-                new ArrayBlockingQueue<Runnable>(5), Executors.defaultThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
+        ExecutorService executor = new ThreadPoolExecutor(3, 5, 200, TimeUnit.MILLISECONDS,
+                new ArrayBlockingQueue<Runnable>(10), new LazyModeThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
 
         for (int i = 0; i < threadNumber; i++) {
             int finalI = i;
@@ -24,10 +24,34 @@ public class LazyModeTest {
                 @Override
                 public void run() {
                     LazyAndUnsafeSingleton lazyAndUnsafeSingleton = LazyAndUnsafeSingleton.getInstance();
-                    System.out.println(lazyAndUnsafeSingleton);
-                    System.out.println(finalI);
+                    System.out.println(Thread.currentThread().getName() + ":" + lazyAndUnsafeSingleton);
                 }
             });
         }
+    }
+
+    @Test
+    public void getNumberForLazyAndSafeSingleton() {
+        int threadNumber = 10;
+
+        ExecutorService executor = new ThreadPoolExecutor(10, 20, 200, TimeUnit.MILLISECONDS,
+                new ArrayBlockingQueue<Runnable>(5),new LazyModeThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
+
+        for (int i = 0; i < threadNumber; i++) {
+            int finalI = i;
+            executor.execute(new Runnable() {
+                @Override
+                public void run() {
+                    LazyAndSafeSingleton lazyAndSafeSingleton = LazyAndSafeSingleton.getInstance();
+                    System.out.println(Thread.currentThread().getName() + ":" + lazyAndSafeSingleton);
+                }
+            });
+        }
+    }
+
+    public static void main(String[] args) {
+        LazyModeTest lazyModeTest = new LazyModeTest();
+        lazyModeTest.getNumberForLazyAndSafeSingleton();
+        lazyModeTest.getNumberForLazyAndUnSafeSingleton();
     }
 }
