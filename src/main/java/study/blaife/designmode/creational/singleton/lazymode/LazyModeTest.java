@@ -28,6 +28,7 @@ public class LazyModeTest {
                 }
             });
         }
+        executor.shutdown();
     }
 
     @Test
@@ -47,6 +48,7 @@ public class LazyModeTest {
                 }
             });
         }
+        executor.shutdown();
     }
 
     public static void main(String[] args) {
