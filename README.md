@@ -17,5 +17,5 @@
 |   ├ container 容器
 |   └ layout 布局
 └ util 工具类
-    └ idcardverify 省份证合法性验证
+    └ idcardverify 身份证合法性验证
 ```
