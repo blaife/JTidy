@@ -8,7 +8,7 @@ import study.blaife.algorithms.util.In;
  * @Author: magd39318
  * @Date: 2021/10/19 18:29
  */
-public class SortFrame {
+public abstract class SortFrame {
 
     /**
      * 排序方法
@@ -24,7 +24,7 @@ public class SortFrame {
      * @param w
      * @return
      */
-    private static boolean less(Comparable v, Comparable w) {
+    protected static boolean less(Comparable v, Comparable w) {
         return v.compareTo(w) < 0;
     }
 
@@ -34,7 +34,7 @@ public class SortFrame {
      * @param i
      * @param j
      */
-    private static void exch(Comparable[] a, int i, int j) {
+    protected static void exch(Comparable[] a, int i, int j) {
         Comparable t = a[i];
         a[i] = a[j];
         a[j] = t;
@@ -44,7 +44,7 @@ public class SortFrame {
      * 展示
      * @param a
      */
-    private static void show(Comparable[] a) {
+    protected static void show(Comparable[] a) {
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + " ");
         }
