@@ -17,6 +17,8 @@ public class SortCompare {
             InsertionSort.sort(a);
         } else if ("Selection".equalsIgnoreCase(alg)) {
             SelectionSort.sort(a);
+        } else if ("Shell".equalsIgnoreCase(alg)) {
+            ShellSort.sort(a);
         }
         timer.stop();
         return timer.getLastTaskTimeMillis();
@@ -37,7 +39,9 @@ public class SortCompare {
     public static void main(String[] args) {
         String alg1 = "Insertion";
         String alg2 = "Selection";
+        String alg3 = "Shell";
         System.out.println(timeRandomInput(alg1, 1000, 1000));
         System.out.println(timeRandomInput(alg2, 1000, 1000));
+        System.out.println(timeRandomInput(alg3, 1000, 1000));
     }
 }
