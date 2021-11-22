@@ -1,4 +1,6 @@
-package study.blaife.algorithms.sort;
+package study.blaife.algorithms.sort.example;
+
+import study.blaife.algorithms.sort.SortFrame;
 
 /**
  * @Description: 希尔排序 - 一种基于插入排序的快速排序算法

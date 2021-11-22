@@ -1,5 +1,8 @@
 package study.blaife.algorithms.sort;
 
+import study.blaife.algorithms.sort.example.InsertionSort;
+import study.blaife.algorithms.sort.example.SelectionSort;
+import study.blaife.algorithms.sort.example.ShellSort;
 import study.blaife.algorithms.util.RandomUtil;
 import study.blaife.algorithms.util.Stopwatch;
 
