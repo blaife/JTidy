@@ -23,7 +23,6 @@ public class ShellSort extends SortFrame {
         }
         while (h >= 1) {
             for (int i = h; i < N; i++) {
-                show(a);
                 for (int j = i; j >= h && less(a[j], a[j-h]); j -= h) {
                     exch(a, j, j - h);
                 }

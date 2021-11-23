@@ -3,6 +3,7 @@ package study.blaife.algorithms.sort;
 import study.blaife.algorithms.sort.example.InsertionSort;
 import study.blaife.algorithms.sort.example.SelectionSort;
 import study.blaife.algorithms.sort.example.ShellSort;
+import study.blaife.algorithms.sort.example.merge.TopDownMergeSort;
 import study.blaife.algorithms.util.RandomUtil;
 import study.blaife.algorithms.util.Stopwatch;
 
@@ -22,6 +23,8 @@ public class SortCompare {
             SelectionSort.sort(a);
         } else if ("Shell".equalsIgnoreCase(alg)) {
             ShellSort.sort(a);
+        } else if ("Merge".equalsIgnoreCase(alg)) {
+            TopDownMergeSort.sort(a);
         }
         timer.stop();
         return timer.getLastTaskTimeMillis();
@@ -43,8 +46,11 @@ public class SortCompare {
         String alg1 = "Insertion";
         String alg2 = "Selection";
         String alg3 = "Shell";
+        String alg4 = "Merge";
         System.out.println(timeRandomInput(alg1, 1000, 1000));
         System.out.println(timeRandomInput(alg2, 1000, 1000));
         System.out.println(timeRandomInput(alg3, 1000, 1000));
+        System.out.println(timeRandomInput(alg4, 1000, 1000));
+
     }
 }
