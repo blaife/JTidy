@@ -9,6 +9,15 @@ import study.blaife.algorithms.sort.SortFrame;
  */
 public class OnSideSort extends SortFrame {
 
+    /**
+     * 位置为 含左不含右
+     * 即：设传入值为 [1,3,5,1,4,3,2,5,1] 0 4 9
+     * 则合并 [1,3,5,1] [4,3,2,5,1]
+     * @param a 数组
+     * @param lo 初始位置
+     * @param mid 分割位置
+     * @param hi 结束位置
+     */
     public static void merge(Comparable[] a, int lo, int mid, int hi) {
         int i = lo;
         int j = mid;
