@@ -1,8 +1,8 @@
 package study.blaife.algorithms.sort;
 
 import study.blaife.algorithms.sort.example.InsertionSort;
-import study.blaife.algorithms.sort.example.SelectionSort;
-import study.blaife.algorithms.sort.example.ShellSort;
+import study.blaife.algorithms.sort.example.basic.SelectionSort;
+import study.blaife.algorithms.sort.example.basic.ShellSort;
 import study.blaife.algorithms.sort.example.merge.BottomUpMergeSort;
 import study.blaife.algorithms.sort.example.merge.TopDownMergeSort;
 import study.blaife.algorithms.sort.example.quick.Quick3WaySort;

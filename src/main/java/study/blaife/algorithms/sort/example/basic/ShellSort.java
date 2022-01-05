@@ -1,4 +1,4 @@
-package study.blaife.algorithms.sort.example;
+package study.blaife.algorithms.sort.example.basic;
 
 import study.blaife.algorithms.sort.SortFrame;
 
