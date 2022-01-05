@@ -5,6 +5,7 @@ import study.blaife.algorithms.sort.example.SelectionSort;
 import study.blaife.algorithms.sort.example.ShellSort;
 import study.blaife.algorithms.sort.example.merge.BottomUpMergeSort;
 import study.blaife.algorithms.sort.example.merge.TopDownMergeSort;
+import study.blaife.algorithms.sort.example.quick.Quick3WaySort;
 import study.blaife.algorithms.sort.example.quick.QuickSort;
 import study.blaife.algorithms.util.RandomUtil;
 import study.blaife.algorithms.util.Stopwatch;
@@ -31,6 +32,8 @@ public class SortCompare {
             BottomUpMergeSort.sort(a);
         } else if ("Quick".equalsIgnoreCase(alg)) {
             QuickSort.sort(a);
+        } else if ("Quick3Way".equalsIgnoreCase(alg)) {
+            Quick3WaySort.sort(a);
         }
         timer.stop();
         return timer.getLastTaskTimeMillis();
@@ -55,13 +58,15 @@ public class SortCompare {
         String alg4 = "TopDownMerge";
         String alg5 = "BottomUpMerge";
         String alg6 = "Quick";
+        String alg7 = "Quick3Way";
 
         System.out.println(alg1 + ": " + timeRandomInput(alg1, 1000, 1000));
         System.out.println(alg2 + ": " + timeRandomInput(alg2, 1000, 1000));
         System.out.println(alg3 + ": " + timeRandomInput(alg3, 1000, 1000));
         System.out.println(alg4 + ": " + timeRandomInput(alg4, 1000, 1000));
         System.out.println(alg5 + ": " + timeRandomInput(alg5, 1000, 1000));
-        System.out.println(alg6 + ": " + timeRandomInput(alg5, 1000, 1000));
+        System.out.println(alg6 + ": " + timeRandomInput(alg6, 1000, 1000));
+        System.out.println(alg7 + ": " + timeRandomInput(alg7, 1000, 1000));
 
 
     }

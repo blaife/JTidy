@@ -9,8 +9,6 @@ import study.blaife.algorithms.sort.SortFrame;
  */
 public class Quick3WaySort extends SortFrame {
 
-
-
     public static void sort(Comparable[] a) {
         sort(a, 0, a.length-1);
     }
