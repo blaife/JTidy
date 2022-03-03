@@ -4,9 +4,9 @@ import study.blaife.algorithms.util.In;
 
 
 /**
- * @Description: 排序框架
- * @Author: magd39318
- * @Date: 2021/10/19 18:29
+ * 排序框架
+ * @author magd39318
+ * @date 2021/10/19 18:29
  */
 public abstract class SortFrame {
 
