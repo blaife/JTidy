@@ -1,7 +1,7 @@
 package study.blaife.basic.stream.group;
 
 /**
- * @Description:
+ * 基础实体
  * @Author: magd39318
  * @Date: 2021/9/23 14:56
  */

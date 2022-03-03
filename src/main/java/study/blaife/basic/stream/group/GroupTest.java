@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @Description: 测试group方法
+ * 测试group方法
  * @Author: magd39318
  * @Date: 2021/9/23 14:55
  */

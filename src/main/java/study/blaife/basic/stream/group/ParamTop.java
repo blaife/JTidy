@@ -3,7 +3,7 @@ package study.blaife.basic.stream.group;
 import java.util.Objects;
 
 /**
- * @Description:
+ * 顶部信息
  * @Author: magd39318
  * @Date: 2021/9/23 15:11
  */
