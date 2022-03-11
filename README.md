@@ -1,5 +1,8 @@
 ```
-┌ basic 基础
+┌ algorithms 算法
+|   ├ sort 排序算法
+|   └ util 公共内容
+├ basic 基础
 |   ├ doublecolon 方法引用
 |   ├ lambda lambda表达式
 |   ├ reflect 反射
