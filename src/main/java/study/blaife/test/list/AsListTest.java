@@ -24,4 +24,9 @@ public class AsListTest {
 
     }
 
+    @Test
+    public void listForSubList() {
+        List<String> capClearCodeList = Arrays.asList(new String[]{"104", "105", "405"});
+        System.out.println(capClearCodeList.subList(1, capClearCodeList.size()-1));
+    }
 }
